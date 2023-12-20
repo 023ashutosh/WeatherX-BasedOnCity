@@ -20,7 +20,7 @@ body{
   max-width: 470px;
   background: linear-gradient(135deg,#00feba, #5b548a);
   color: #fff;
-  margin: 100px auto 0;
+  margin: 50px auto 0;
   border-radius: 20px;
   padding: 40px 35px;
   text-align: center;
@@ -54,6 +54,10 @@ body{
   width: 60px;
   height: 60px;
   cursor: pointer;
+}
+
+.search button:hover{
+  background: #fafe00; 
 }
 
 .search button img{
