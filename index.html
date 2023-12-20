@@ -4,21 +4,28 @@
 <head>
   <meta charset="UTF-8">
   <title>WEATHER : Ashutosh Pratap </title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit&family=Poppins:ital@1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">  
 </head>
 
 <body>
   <div class="card">
     <div class="search">
       <input id="cityName" type="text" placeholder="Enter city name...">
-      <button id="searchBtn">
-        <img src="images/search.png" alt="search">
+      <button >
+        <img id="searchBtn" src="images/search.png" alt="search">
       </button>
     </div>
 
     <div class="weather">
-      <img src="images/rain.png" class="weather-icon" id="weather-icon">
-      <h1 class="temp">22°C</h1>
-      <h2 class="city">New York</h2>
+      <img src="images/rain.png" class="weather-icon" id="weatherIcon">
+      <h2 class="temp">22°C</h2>
+      <h3 class="city">New York</h3>
       <div class="details">
         <div class="col">
           <img src="images/humidity.png" alt="humidity">
@@ -36,11 +43,24 @@
         </div> 
       </div>
     </div>
+    
+    <div id="redirectLinks">
+      <!-- Social media icons side by side -->
+      
+      <a href="https://github.com/023ashutosh" class="social-icon" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/kh-ashutosh/" class="social-icon" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="#" class="social-icon"><i class="fab fa-twitter" target="_blank"></i></a>
+      <hr class="line">
+      <!-- Made by Ashutosh -->
+      <p class="made-by">Made by Ashutosh</p>
+    </div>
+    
   </div>
 
-  <div id="weatherContainer">
-  </div>
+
+
 </body>
+<script src="https://kit.fontawesome.com/2c5ffa71a0.js" crossorigin="anonymous"></script>
 <script src="script.js" defer></script>
 
 </html>

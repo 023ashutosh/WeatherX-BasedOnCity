@@ -3,9 +3,15 @@ let cityName = document.getElementById("cityName")
 let searchBtn =document.getElementById("searchBtn")
 let weatherContainer = document.getElementById("weatherContainer")
 
-const weatherIcon = getElementById("weather-icon") 
+let City = document.querySelector(".city")
+// let Details = document.querySelector(".details")
+let Temp = document.querySelector(".temp")
+let Humidity = document.querySelector(".humidity")
+let Wind = document.querySelector(".wind")
 
-const apiKey = `7cf0624eeabfe0564fd0b4d8cf24a1af`;
+let weatherIcon = document.getElementById("weatherIcon") 
+
+const apiKey = `xyz`;
 const apiUrl = `https://api.openweathermap.org/data/2.5/weather?&units=metric`;
 
 searchBtn.addEventListener("click", function() {
@@ -15,7 +21,7 @@ searchBtn.addEventListener("click", function() {
     fetchAPI(city);
   }
   else{
-    weatherContainer.innerHTML = "Please enter a valid city name."
+    City.innerHTML = "Please enter a valid city name."
   }
 })
 
@@ -27,7 +33,7 @@ function fetchAPI(city){
         return response.json()  
       }
       else{
-        weatherContainer.innerHTML = "Network Error. Try again later."
+        City.innerHTML = "Network Error. Try again later."
       }
     })
     .then((data)=>{
@@ -35,24 +41,21 @@ function fetchAPI(city){
     })
     .catch((error)=>{
         console.log(error);
-        weatherContainer.innerHTML = "City does not exist"
+        City.innerHTML = "City does not exist"
     })
 }
 
 
 function handleWeatherData(data) {
-  const cityName = data.name;
-  const description = data.weather[0].description;
-  const temperature = data.main.temp;
-  const humidity = data.main.humidity;
-  const windSpeed = data.wind.speed;
-  weatherContainer.innerHTML = `
-    <p>City: ${cityName}</p>
-    <p>Temperature: ${temperature}°C</p>
-    <p>Description: ${description}</p>
-    <p>Humidity: ${humidity}</p>
-    <p>Wind Speed: ${windSpeed} Kms/Hr</p>
-  `;
+    City.innerHTML = data.name;
+    // Details.innerHTML = data.weather[0].description;
+    Temp.innerHTML = Math.round(data.main.temp) + "° C";
+    Humidity.innerHTML = data.main.humidity + " %";
+    Wind.innerHTML = data.wind.speed + " Kms/Hr";
+
+    console.log(data.weather[0].main)
+
+  
   if(data.weather[0].main == "Clouds"){
     weatherIcon.src="images/clouds.png";
   }
@@ -68,6 +71,11 @@ function handleWeatherData(data) {
   else if(data.weather[0].main == "Mist"){
     weatherIcon.src="images/mist.png";
   }
-
-          
+  else if(data.weather[0].main == "Haze"){
+    weatherIcon.src="images/haze.png";
+  }
+  else if(data.weather[0].main == "Snow"){
+    weatherIcon.src="images/snow.png";
+  }
+   
 }

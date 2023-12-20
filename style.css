@@ -1,9 +1,15 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit&family=Poppins:ital@1&display=swap');
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font : "POPPINS", "sans-serif"
-  }
+  font-family: 'Kanit', sans-serif;
+  font :  "Montserrat","Poppins";
+  font-weight: 400;
+}
 
 body{
   background: #222;
@@ -44,28 +50,29 @@ body{
   border: 0;
   outline: 0;
   background: #ebfffc; 
-  border-radius: 50% circle;
+  border-radius: 50% ;
   width: 60px;
   height: 60px;
   cursor: pointer;
 }
 
 .search button img{
-  width: 18px;
+  width: 16px;
 }
 
 .weather-icon{
-  width: 170px;
-  margin-top: 30px;
-}
-
-.weather h1{
-  font-size: 80px;
-  font-weight: 500;
+  width: 150px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .weather h2{
-  font-size: 45px;
+  font-size: 60px;
+  font-weight: 500;
+}
+
+.weather h4{
+  font-size: 80px;
   font-weight: 400;
   margin-top: -10px;
 }
@@ -75,7 +82,7 @@ body{
   align-items: center;
   justify-content: space-between;
   padding: 0 20px;
-  margin-top: 50px;
+  margin-top: 35px;
 }
 
 .col{
@@ -92,4 +99,39 @@ body{
 .humidity, .wind{
   font-size: 28px;
   margin-top: -6px ;
+}
+
+
+/* FOOTER */
+/* Add the following styles to center the social icons and 'Made by Ashutosh' */
+
+#redirectLinks {
+  text-align: center;
+  margin-top: 35px;
+}
+
+.social-icon {
+  margin: 0 10px;
+  font-size: 24px;
+  color: #000; /* Adjust color as needed */
+  text-decoration: none;
+}
+
+.social-icon:hover {  
+  color: #e0e6e7; /* Adjust color as needed */
+}
+
+.made-by {
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 10px;
+  color: #000; /* Adjust color as needed */
+}
+
+/* LINE */  
+.line {
+  width: 30%; /* Adjust the width as needed */
+  margin: 10px auto; /* Center the line */
+  border: 0; /* Remove default border */
+  border-top: 1px solid #000; /* Add a 1px solid line with color #ccc */
 }
