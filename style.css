@@ -15,6 +15,83 @@ body{
   background: #222;
 }
 
+.main{
+  display: flex;
+}
+
+.button-container{
+  margin-left:25px ;
+  margin-right:25px ;
+  margin-top: 15%;
+}
+
+.button{
+  margin: 5px;
+  border: none;
+  outline: 0;
+}
+
+.button button{
+  vertical-align: middle;
+  font-size: 18px;
+  font-weight: 800;
+  /* background: #ebfffc; */
+  width: 50px;
+  height: 50px;
+  border-radius: 100% ;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.button button{
+  vertical-align: middle;
+  font-size: 18px;
+  font-weight: 800;
+  /* background: #ebfffc; */
+  width: 50px;
+  height: 50px;
+  border-radius: 100% ;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.button-one{
+color: white;
+  background: linear-gradient(135deg,#00feba, #5b548a);
+}
+.button-one:hover{
+  color: black;
+  background: #fff;
+}
+
+.button-two{
+  color: white;
+  background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,222,0.9864320728291317) 22%, rgba(252,176,69,1) 100%);
+}
+.button-two:hover{
+  color: black;
+  background: #fff;
+}
+
+.button-three{
+  color: white;
+  background: linear-gradient(21deg, rgba(59,235,70,1) 0%, rgba(51,122,38,1) 26%, rgba(55,129,40,1) 38%, rgba(0,0,0,0.9864320728291317) 55%, rgba(62,240,142,1) 93%);
+}
+.button-three:hover{
+  color: black;
+  background: #fff;
+}
+
+.button-four{
+  color: white;
+  background: linear-gradient(196deg, rgba(59,104,235,1) 11%, rgba(251,74,95,0.9864320728291317) 48%, rgba(69,223,252,1) 82%);
+}
+.button-four:hover{
+  color: black;
+  background: #fff;
+}
+
+
 .card{
   width: 90%;
   max-width: 470px;
@@ -58,6 +135,8 @@ body{
 
 .search button:hover{
   background: #fafe00; 
+  width: 62px;
+  height: 62px;
 }
 
 .search button img{

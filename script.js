@@ -1,17 +1,40 @@
-
 let cityName = document.getElementById("cityName")
 let searchBtn =document.getElementById("searchBtn")
-let weatherContainer = document.getElementById("weatherContainer")
+
+let btn1 = document.getElementById("btn1")
+let btn2 = document.getElementById("btn2")
+let btn3 = document.getElementById("btn3")
+let btn4 = document.getElementById("btn4")
+
+let cardColor = document.getElementsByClassName("card")[0]
+
+btn1.addEventListener("click", function () {
+  cardColor.style.background = "linear-gradient(135deg,#00feba, #5b548a)";
+});
+
+btn2.addEventListener("click", function () {
+  cardColor.style.background = "linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,222,0.9864320728291317) 22%, rgba(252,176,69,1) 100%)";
+});
+
+
+btn3.addEventListener("click", function () {
+  cardColor.style.background = "linear-gradient(21deg, rgba(59,235,70,1) 0%, rgba(51,122,38,1) 26%, rgba(55,129,40,1) 38%, rgba(0,0,0,0.9864320728291317) 55%, rgba(62,240,142,1) 93%)";
+});
+
+btn4.addEventListener("click", function () {
+    cardColor.style.background = "linear-gradient(196deg, rgba(59,104,235,1) 11%, rgba(251,74,95,0.9864320728291317) 48%, rgba(69,223,252,1) 82%)";
+});
+
+
 
 let City = document.querySelector(".city")
-// let Details = document.querySelector(".details")
 let Temp = document.querySelector(".temp")
 let Humidity = document.querySelector(".humidity")
 let Wind = document.querySelector(".wind")
 
 let weatherIcon = document.getElementById("weatherIcon") 
 
-const apiKey = `xyz`;
+const apiKey = process.env.API_KEY || 'default_api_key';
 const apiUrl = `https://api.openweathermap.org/data/2.5/weather?&units=metric`;
 
 searchBtn.addEventListener("click", function() {
@@ -48,7 +71,6 @@ function fetchAPI(city){
 
 function handleWeatherData(data) {
     City.innerHTML = data.name;
-    // Details.innerHTML = data.weather[0].description;
     Temp.innerHTML = Math.round(data.main.temp) + "° C";
     Humidity.innerHTML = data.main.humidity + " %";
     Wind.innerHTML = data.wind.speed + " Kms/Hr";
